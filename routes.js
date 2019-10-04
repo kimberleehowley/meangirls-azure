@@ -23,7 +23,7 @@ router.get("/quotes", asyncHandler(async(req, res) => {
 // Send a GET request to read a random quote
 router.get("/quotes/random", asyncHandler(async(req, res) => {
     const quote = await records.getRandomQuote(); 
-    res.json(lyric); 
+    res.json(quote); 
 })); 
 
 module.exports = router; 
