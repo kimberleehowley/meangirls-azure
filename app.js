@@ -6,10 +6,10 @@ const express = require('express');
 const app = express(); 
 
 // We'll use routes in the future for our API 
-//const routes = require('./routes')
+const routes = require('./routes')
 
 app.use(express.json()); 
-//app.use('/api', routes); 
+app.use('/api', routes); 
 
 // Custom middleware, throws an error when resource not found
 // Makes our code more DRY so we don't have to repeat this within every route 
